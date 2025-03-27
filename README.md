@@ -1,6 +1,6 @@
 ## Функционал Сервиса: https://github.com/apukhaevaa/short-link-service/blob/main/screenshots/FastAPI%20-%20Swagger%20UI_1.pdf
 
-## Функционал Сервиса: https://github.com/apukhaevaa/short-link-service/blob/main/screenshots/FastAPI%20-%20Swagger%20UI_2.pdf
+## Функционал Сервиса (развернутый): https://github.com/apukhaevaa/short-link-service/blob/main/screenshots/FastAPI%20-%20Swagger%20UI_2.pdf
 
 
 # ShortLinks Service
