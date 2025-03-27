@@ -342,47 +342,6 @@ Dockerfile предназначен для создания образа при�
 
 
 
-# Устанавливаем системные зависимости для сборки mysqlclient
-
-RUN apt-get update && apt-get install -y \
-
-    build-essential \
-
-    pkg-config \
-
-    libmariadb-dev \
-
-    libmariadb-dev-compat \
-
- && rm -rf /var/lib/apt/lists/*
-
-
-
-WORKDIR /app
-
-
-
-# Копируем файл зависимостей и устанавливаем их
-
-COPY requirements.txt .
-
-RUN pip install --upgrade pip && pip install -r requirements.txt
-
-
-
-# Копируем исходный код приложения
-
-COPY . .
-
-
-
-# Запускаем приложение
-
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--reload"]
-
-```
-
-
 
 ### docker-compose.yml
 
