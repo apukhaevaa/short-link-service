@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: shortlinks_app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=mysql+pymysql://user1:88673120369@db:3306/db1?ssl_ca=/etc/mysql/certs/root.crt
+    volumes:
+      - .:/app
+    command: uvicorn main:app --host 0.0.0.0 --reload
+
+  db:
+    image: mysql:8.0
+    container_name: shortlinks_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: db1
+      MYSQL_USER: user1
+      MYSQL_PASSWORD: 88673120369
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./certs:/etc/mysql/certs
+
+volumes:
+  db_data:

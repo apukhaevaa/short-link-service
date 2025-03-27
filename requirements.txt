@@ -1,0 +1,11 @@
+fastapi[all]
+uvicorn[standard]
+sqlalchemy
+pymysql
+mysqlclient
+passlib[bcrypt]
+python-jose[cryptography]
+jinja2
+apscheduler
+setuptools
+wheel

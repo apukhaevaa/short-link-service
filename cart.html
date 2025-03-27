@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+</head>
+<body>
+    <h1>Корзина</h1>
+    <ul>
+        {% if cart %}
+        <li>Товары в корзине: {{ cart }}</li>
+        {% else %}
+        <li>Ваша корзина пуста</li>
+        {% endif %}
+    </ul>
+    <a href="/catalog">Перейти в каталог товаров</a>
+</body>
+</html>
